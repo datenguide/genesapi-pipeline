@@ -16,18 +16,9 @@ For example, it is used within (and developed for) the
 
 ## install
 
-`genesapi-cli` requires python 3.
+`genesapi-cli` requires Python 3. We recommend organizing your Python stuff via pip and virtual environments.
 
-We recommend organizing your python stuff via pip and virtual environments.
-
-**FIXME**: `genesapi-cli` relies on a fork of
-[regenesis](https://github.com/pudo/regenesis), that needs to be installed
-manually beforehand, any pull requests to hook this properly into our
-`setup.py` are welcomed ;)
-
-    pip install -e git+git@github.com:datenguide/regenesis.git#egg=regenesis
-
-    pip install -e git+git@github.com:datenguide/genesapi-cli.git#egg=genesapi
+    pip install -e 'git+https://github.com/datenguide/genesapi-cli.git#egg=genesapi'
 
 This will install the `genesapi` command-line interface and all the
 requirements, like [pandas](https://pandas.pydata.org) (see their [install
@@ -119,7 +110,7 @@ into Elasticsearch, the other tasks are needed in between (see below)
 `genesapi` prints a lot to `stdout`, for instance the jsonified *facts* so that
 they can easily piped to logstash, so logging happens to `stderr`
 
-You can adjust the logging level (default: `INFO`) to any valid python logging
+You can adjust the logging level (default: `INFO`) to any valid Python logging
 level, for example:
 
     genesapi --logging DEBUG <task> <args>
