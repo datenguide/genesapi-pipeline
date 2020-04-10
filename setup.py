@@ -26,6 +26,7 @@ setup(
     author_email='simon.woerpel@medienrevolte.de',
     license='MIT',
     packages=['genesapi'],
+    python_requires='>=3.5',
     entry_points={
         'console_scripts': [
             'genesapi=genesapi.entry:main'
@@ -37,13 +38,10 @@ setup(
         'python-frontmatter',
         'awesome-slugify',
         'zeep',
-        'regenesis',
         'python-dateutil',
-        'elasticsearch'
+        'elasticsearch',
+
+        'regenesis @ https://github.com/datenguide/regenesis/tarball/master#egg=regenesis',
     ],
-    # FIXME see README.md about regenesis install note
-    # dependency_links=[
-    #     'https://github.com/datenguide/regenesis/tarball/master#egg=regenesis-0.1'
-    # ],
     zip_safe=False
 )
